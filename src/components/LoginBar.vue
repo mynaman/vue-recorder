@@ -20,6 +20,7 @@
                 <div class="auth-btn">
                     <h3>소셜 로그인</h3>
                     <button class="btn facebook">FACEBOOK</button>
+                    <button class="btn google">GOOGLE</button>
                     <button class="btn kakao">KAKAO</button>
                 </div>
             </div>
@@ -185,6 +186,12 @@ export default {
                 }
                 .facebook:hover {
                     background-color: #304a83;
+                }
+                .google {
+                    background-color: #c9171e;
+                }
+                .google:hover {
+                    background-color: #b4141b;
                 }
                 .kakao {
                     background-color: #fcea00;
