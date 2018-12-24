@@ -54,7 +54,6 @@ export default {
             justify-content: space-between;
             align-items: center;
             margin: 10px 20px;
-
             .company{
                 a{
                     text-decoration: none;

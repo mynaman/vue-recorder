@@ -25,7 +25,6 @@ export default {}
     height: 80px;
     border-top: 1px solid #eee;
     bottom: 0;
-
     .footer_container{
         .container{
             width: 100%;

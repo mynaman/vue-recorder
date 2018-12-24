@@ -19,9 +19,23 @@
                 </div>
                 <div class="auth-btn">
                     <h3>소셜 로그인</h3>
-                    <button class="btn facebook">FACEBOOK</button>
-                    <button class="btn google">GOOGLE</button>
+                    <button class="btn facebook"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook-f' }"/></button>
+                    <button class="btn google"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'google' }"/></button>
                     <button class="btn kakao">KAKAO</button>
+                </div>
+                <div class="company">
+                  <div class="company_line">
+                      <span></span>
+                  </div>
+                  <div class="company_security">
+                    <ul class="list_links">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <div class="corp">
+                      <span>ⓒ A mocha Corp.</span>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -57,6 +71,7 @@ export default {
         width: 100%;
         height: 100%;
         right: 0;
+        overflow-y: auto;
         animation-name: move;
         animation-duration: 0.2s;
 
@@ -134,32 +149,28 @@ export default {
                 text-align: center;
                 position: relative;
                 overflow: hidden;
-
                 span{
-                display: inline-block;
-                vertical-align: middle;
-                position: relative;
-                color: #665f5a;
-                padding: 0 .75rem;
+                  display: inline-block;
+                  vertical-align: middle;
+                  position: relative;
+                  color: #665f5a;
+                  padding: 0 .75rem;
                 }
-
                 span:before{
-                    right: 100%;
+                  right: 100%;
                 }
-
                 span:after{
-                    left: 100%;
+                  left: 100%;
                 }
                 span:before, span:after{
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    width: 1000px;
-                    top: 50%;
-                    border-top :1px solid #a19b97;
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  width: 1000px;
+                  top: 50%;
+                  border-top :1px solid #a19b97;
                 }
             }
-
             .auth-btn{
                 h3{
                     color: #000;
@@ -200,6 +211,60 @@ export default {
                     background-color: #e6d600;
                 }
             }
+            .company{
+              display: block;
+              .company_line{
+                  text-align: center;
+                  position: relative;
+                  overflow: hidden;
+                  span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    color: #665f5a;
+                    padding: 0 .75rem;
+                  }
+                  span:before{
+                    right: 0%;
+                  }
+                  span:before, span:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 1000px;
+                    top: 50%;
+                    border-top :1px solid #a19b97;
+                  }
+              }
+              .company_security{
+                text-align: left;
+                .list_links{
+                  margin:0;
+                  padding:0;
+                  li{
+                    margin: 20px 0;
+                    a{
+                      text-decoration: none;
+                      color: #000;
+                      font-size: 17px;
+                    }
+                  }
+                }
+              }
+              .corp{
+                // position: absolute;
+                padding-bottom: 20px;
+                bottom: 0;
+                color: #828282;
+                font-size: 15px;
+              }
+            }
+            @media (min-width: 768px){
+              .company{
+                display: none;
+              }
+            }
+
         }
     }
     @media (min-width: 768px){
